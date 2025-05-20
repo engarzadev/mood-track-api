@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: mood-tracker-backend
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://engarza2019:GSFnQWCsy7aV1Jqe@cluster0.plklylm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - key: PORT
+        value: 3000
